@@ -45,8 +45,8 @@
         <li id="gamesBtn">بازی‌های کامپیوتری</li>
 
         <ul class="sub-list" id="gamesList">
-            <li>کال آف دیوتی</li>
-            <li>ماینکرفت</li>
+            <li>معادله انیشتنگ</li>
+            <li>فیزیک</li>
         </ul>
 
         <li>برنامه‌نویسی</li>
