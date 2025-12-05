@@ -2,7 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>بازی‌های مورد علاقه</title>
+    <title>سایت امیر</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap');
@@ -49,6 +49,7 @@
             align-items: center;
             font-size: 18px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         ul li:hover {
@@ -63,23 +64,13 @@
             border-radius: 50%;
         }
 
-        .back-btn {
-            display: block;
-            margin-top: 30px;
-            text-align: center;
-            padding: 14px;
-            background: rgba(255,255,255,0.12);
-            border-radius: 14px;
-            color: #f5c542;
+        a {
             text-decoration: none;
-            font-size: 18px;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            background: rgba(255,255,255,0.22);
-            transform: translateY(-3px);
+            color: inherit;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     </style>
 </head>
@@ -87,23 +78,22 @@
 <body>
 
     <div class="container">
-        <h2>بازی‌های مورد علاقه من</h2>
+        <h2>علایق من</h2>
 
         <ul>
+
+            <!-- دکمه لینک به صفحه بازی‌ها -->
             <li>
-                <span>Minecraft</span>
-                <span class="dot"></span>
+                <a href="games/index.html">
+                    <span>بازی‌های کامپیوتری</span>
+                    <span class="dot"></span>
+                </a>
             </li>
 
-            <li>
-                <span>Call of Duty</span>
-                <span class="dot"></span>
-            </li>
+            <li><span>برنامه‌نویسی</span> <span class="dot"></span></li>
+            <li><span>ورزش</span> <span class="dot"></span></li>
+
         </ul>
-
-        <!-- دکمه برگشت به صفحه اصلی -->
-        <a class="back-btn" href="../index.html">⬅ بازگشت به صفحه اصلی</a>
-
     </div>
 
 </body>
