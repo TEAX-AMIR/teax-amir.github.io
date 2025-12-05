@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سایت امیر</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            direction: rtl;
+            background: #111;
+            color: white;
+            padding: 30px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: rgba(255,255,255,0.1);
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .sub-list {
+            display: none; /* اول مخفی است */
+            margin-right: 20px;
+        }
+
+        .sub-list li {
+            background: rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>علایق من</h2>
+
+    <ul>
+        <li id="gamesBtn">بازی‌های کامپیوتری</li>
+
+        <ul class="sub-list" id="gamesList">
+            <li>کال آف دیوتی</li>
+            <li>ماینکرفت</li>
+        </ul>
+
+        <li>برنامه‌نویسی</li>
+       <li>ورزش</li>
+    </ul>
+
+    <script>
+        let btn = document.getElementById("gamesBtn");
+        let list = document.getElementById("gamesList");
+
+        btn.onclick = function () {
+            if (list.style.display === "block") {
+                list.style.display = "none";   // مخفی کن
+            } else {
+                list.style.display = "block";  // نشان بده
+            }
+        };
+    </script>
+
+</body>
+</html>
