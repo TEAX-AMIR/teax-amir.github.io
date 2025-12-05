@@ -49,11 +49,23 @@
             align-items: center;
             font-size: 18px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         ul li:hover {
             background: rgba(255, 255, 255, 0.22);
             transform: translateY(-3px);
+        }
+
+        /* زیرآیتم‌ها */
+        .sub-list {
+            margin-top: 10px;
+            padding-right: 20px;
+        }
+
+        .sub-list li {
+            background: rgba(255, 255, 255, 0.08);
+            font-size: 16px;
         }
 
         .dot {
@@ -71,7 +83,17 @@
         <h2>علایق من</h2>
 
         <ul>
-            <li><span>بازی‌های کامپیوتری</span> <span class="dot"></span></li>
+            <li>
+                <span>بازی‌های کامپیوتری</span> 
+                <span class="dot"></span>
+            </li>
+
+            <!-- زیرلیست بازی‌ها -->
+            <ul class="sub-list">
+                <li><span>Call of Duty</span> <span class="dot"></span></li>
+                <li><span>Minecraft</span> <span class="dot"></span></li>
+            </ul>
+
             <li><span>برنامه‌نویسی</span> <span class="dot"></span></li>
             <li><span>ورزش</span> <span class="dot"></span></li>
         </ul>
