@@ -2,109 +2,126 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>علم</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازی‌های من</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap');
 
         body {
             font-family: 'Vazirmatn', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #000000, #1a1a1a);
-            color: #ffffff;
+            background: #f4f6fa; /* زمینه روشن مثل DentCast */
         }
 
-        .container {
-            max-width: 700px;
-            margin: 80px auto;
-            padding: 30px;
-            backdrop-filter: blur(18px);
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-
-        h2 {
+        /* هدر */
+        .header {
             text-align: center;
-            color: #f5c542;
-            font-size: 32px;
-            margin-bottom: 20px;
+            margin-top: 40px;
+            margin-bottom: 10px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .header h1 {
+            font-size: 34px;
+            font-weight: 800;
+            color: #1a73e8; /* آبی DentCast */
+            margin-bottom: 6px;
         }
 
-        ul li {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 15px 20px;
-            margin: 10px 0;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 18px;
-            transition: 0.3s;
+        .header p {
+            color: #6c757d;
+            font-size: 15px;
+            margin: 0;
         }
 
-        ul li:hover {
-            background: rgba(255, 255, 255, 0.22);
-            transform: translateY(-3px);
+        /* کارت‌ها */
+        .cards {
+            max-width: 900px;
+            margin: 25px auto;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 22px;
+            border-radius: 18px;
+            border: 1px solid #e6e9ef;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: 0.25s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #212529;
         }
 
         .dot {
-            width: 10px;
-            height: 10px;
-            background: #f5c542;
+            width: 11px;
+            height: 11px;
+            background: #ff9800;
             border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
         }
 
+        /* دکمه برگشت */
         .back-btn {
             display: block;
-            margin-top: 30px;
-            text-align: center;
-            padding: 14px;
-            background: rgba(255,255,255,0.12);
-            border-radius: 14px;
-            color: #f5c542;
+            width: fit-content;
+            margin: 35px auto;
+            padding: 14px 30px;
+            background: #1a73e8;
+            color: white;
             text-decoration: none;
-            font-size: 18px;
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: 0.3s;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: 0.25s;
         }
 
         .back-btn:hover {
-            background: rgba(255,255,255,0.22);
             transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(0,0,0,0.18);
         }
+
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h2>بازی‌های مورد علاقه من</h2>
+    <!-- هدر مانند DentCast -->
+    <div class="header">
+        <h1>بازی‌های مورد علاقه من</h1>
+        <p>لیست بازی‌هایی که دوست دارم</p>
+    </div>
 
-        <ul>
-            <li>
-                <span>Minecraft</span>
-                <span class="dot"></span>
-            </li>
+    <!-- کارت‌ها -->
+    <div class="cards">
 
-            <li>
-                <span>Call of Duty</span>
-                <span class="dot"></span>
-            </li>
-        </ul>
+        <div class="card">
+            <div class="title">Minecraft <span class="dot"></span></div>
+        </div>
 
-        <!-- دکمه برگشت به صفحه اصلی -->
-        <a class="back-btn" href="../index.html">⬅ بازگشت به صفحه اصلی</a>
+        <div class="card">
+            <div class="title">Call of Duty <span class="dot"></span></div>
+        </div>
 
     </div>
+
+    <!-- دکمه برگشت -->
+    <a class="back-btn" href="../index.html">بازگشت به صفحه اصلی</a>
 
 </body>
 </html>
