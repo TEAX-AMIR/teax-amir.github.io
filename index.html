@@ -1,16 +1,81 @@
 <!DOCTYPE html>
-
 <html lang="fa" dir="rtl">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>سایت امیر</title>
-  </head>
-  <body>
-<h2> علایق من</h2>
-<ul>
-  <li> بازی های کامپیوتری</li>
-  <li>برنامه نویسی</li>
-  <li>ورزش</li>
-</ul>
-  </body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 30px;
+            backdrop-filter: blur(18px);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #f5c542;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        ul li:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-3px);
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #f5c542;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>علایق من</h2>
+
+        <ul>
+            <li><span>بازی‌های کامپیوتری</span> <span class="dot"></span></li>
+            <li><span>برنامه‌نویسی</span> <span class="dot"></span></li>
+            <li><span>ورزش</span> <span class="dot"></span></li>
+        </ul>
+    </div>
+
+</body>
 </html>
