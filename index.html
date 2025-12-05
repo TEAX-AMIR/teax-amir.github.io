@@ -2,8 +2,7 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بازی‌های کامپیوتری</title>
+    <title>سایت امیر</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap');
@@ -12,15 +11,19 @@
             font-family: 'Vazirmatn', sans-serif;
             margin: 0;
             padding: 0;
-            background: rgba(255, 255, 255, 0.08); /* همان طوسی */
-            height: 100vh;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #ffffff;
         }
 
         .container {
-            width: 100%;
+            max-width: 700px;
+            margin: 80px auto;
             padding: 30px;
-            background: rgba(255, 255, 255, 0.08); /* همان بک‌گراند نیمه شفاف */
-            box-sizing: border-box;
+            backdrop-filter: blur(18px);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
         h2 {
@@ -46,6 +49,7 @@
             align-items: center;
             font-size: 18px;
             transition: 0.3s;
+            cursor: pointer;
         }
 
         ul li:hover {
@@ -60,41 +64,36 @@
             border-radius: 50%;
         }
 
-        .back-btn {
-            margin-top: 25px;
-            text-align: center;
-        }
-
-        .back-btn a {
-            background: #f5c542;
-            color: #000;
-            padding: 12px 25px;
-            border-radius: 12px;
+        a {
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            color: inherit;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-
-        .back-btn a:hover {
-            background: #ffdd66;
-        }
-
     </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h2>بازی‌های کامپیوتری</h2>
+        <h2>علایق من</h2>
 
         <ul>
-            <li><span>Minecraft</span> <span class="dot"></span></li>
-            <li><span>Call of Duty</span> <span class="dot"></span></li>
-        </ul>
 
-        <div class="back-btn">
-            <a href="../index.html">بازگشت به صفحه اصلی</a>
-        </div>
+            <!-- دکمه لینک به صفحه بازی‌ها -->
+            <li>
+                <a href="games/index.html">
+                    <span>بازی‌های کامپیوتری</span>
+                    <span class="dot"></span>
+                </a>
+            </li>
+
+            <li><span>برنامه‌نویسی</span> <span class="dot"></span></li>
+            <li><span>ورزش</span> <span class="dot"></span></li>
+
+        </ul>
     </div>
 
 </body>
