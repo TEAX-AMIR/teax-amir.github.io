@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>بازی‌های مورد علاقه</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 30px;
+            backdrop-filter: blur(18px);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #f5c542;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        ul li:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-3px);
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #f5c542;
+            border-radius: 50%;
+        }
+
+        .back-btn {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            padding: 14px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 14px;
+            color: #f5c542;
+            text-decoration: none;
+            font-size: 18px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.22);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>بازی‌های مورد علاقه من</h2>
+
+        <ul>
+            <li>
+                <span>Minecraft</span>
+                <span class="dot"></span>
+            </li>
+
+            <li>
+                <span>Call of Duty</span>
+                <span class="dot"></span>
+            </li>
+        </ul>
+
+        <!-- دکمه برگشت به صفحه اصلی -->
+        <a class="back-btn" href="../index.html">⬅ بازگشت به صفحه اصلی</a>
+
+    </div>
+
+</body>
+</html>
