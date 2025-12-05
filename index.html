@@ -12,19 +12,23 @@
             font-family: 'Vazirmatn', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #000000, #1a1a1a);
-            color: #ffffff;
+            background: rgba(255, 255, 255, 0.08); /* کل صفحه طوسی */
+            height: 100vh;
         }
 
         .container {
-            max-width: 700px;
-            margin: 80px auto;
+            width: 100%;
+            height: 100vh; 
             padding: 30px;
-            backdrop-filter: blur(18px);
+            box-sizing: border-box;
+
+            /* فقط طوسی نیمه شفاف */
             background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+
+            /* حذف بوردر، گوشه‌گرد و سایه */
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         h2 {
@@ -72,24 +76,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        /* نسخه موبایل */
-        @media (max-width: 768px) {
-            .container {
-                max-width: 100%;
-                margin: 20px;
-                padding: 20px;
-            }
-
-            h2 {
-                font-size: 26px;
-            }
-
-            ul li {
-                font-size: 16px;
-                padding: 12px 15px;
-            }
         }
     </style>
 </head>
