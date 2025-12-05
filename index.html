@@ -2,98 +2,116 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>teax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت امیر</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap');
 
         body {
             font-family: 'Vazirmatn', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #000000, #1a1a1a);
-            color: #ffffff;
+            background: #f4f6fa;
         }
 
-        .container {
-            max-width: 700px;
-            margin: 80px auto;
-            padding: 30px;
-            backdrop-filter: blur(18px);
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-
-        h2 {
+        .header {
             text-align: center;
-            color: #f5c542;
+            padding: 25px 10px 10px;
+        }
+
+        .header h1 {
             font-size: 32px;
-            margin-bottom: 20px;
+            color: #1a73e8;
+            font-weight: 800;
+            margin: 0;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
+        .header p {
+            color: #555;
+            font-size: 15px;
+            margin-top: 8px;
         }
 
-        ul li {
-            background: rgba(255, 255, 255, 0.12);
-            padding: 15px 20px;
-            margin: 10px 0;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.18);
+        .cards {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 18px 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+            transition: 0.25s;
+            border: 1px solid #e7e7e7;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 18px;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        ul li:hover {
-            background: rgba(255, 255, 255, 0.22);
-            transform: translateY(-3px);
-        }
-
-        .dot {
-            width: 10px;
-            height: 10px;
-            background: #f5c542;
-            border-radius: 50%;
-        }
-
-        a {
             text-decoration: none;
-            color: inherit;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+
+        .card span {
+            font-size: 18px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .badge {
+            background: #ff6d3d;
+            color: #fff;
+            padding: 3px 8px;
+            font-size: 12px;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <h2>علم</h2>
+    <div class="header">
+        <h1>سایت امیر</h1>
+        <p>درس‌های من</p>
+    </div>
 
-        <ul>
+    <div class="cards">
 
-            <!-- دکمه لینک به صفحه بازی‌ها -->
-            <li>
-                <a href="games/index.html">
-                    <span>مطالب علمی</span>
-                    <span class="dot"></span>
-                </a>
-            </li>
+        <!-- دکمه علوم → لینک به games/index.html -->
+        <a class="card" href="games/index.html">
+            <span>علوم</span>
+            <div class="badge">جدید</div>
+        </a>
 
-            <li><span>فیزیک وفرمول انیشتنگ</span> <span class="dot"></span></li>
-            <li><span>علوم</span> <span class="dot"></span></li>
+        <div class="card">
+            <span>ریاضی</span>
+            <div class="badge">⭐</div>
+        </div>
 
-        </ul>
+        <div class="card">
+            <span>فارسی</span>
+            <div class="badge">📝</div>
+        </div>
+
+        <div class="card">
+            <span>دیکته</span>
+            <div class="badge">✏️</div>
+        </div>
+
+        <div class="card">
+            <span>انشا</span>
+            <div class="badge">📘</div>
+        </div>
+
     </div>
 
 </body>
