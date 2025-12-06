@@ -3,36 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>علوم تجربی</title>
+    <title>روضا</title>
+
+    <!-- فونت زیبا -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(180deg, #fff 50%, #ffd700 100%); /* ترکیب سفید و طلایی */
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            background: #fff8dc; /* طلایی روشن یک‌دست */
             margin: 0;
             padding: 0;
-            text-align: center;
+            min-height: 100vh; /* کل ارتفاع صفحه */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
-            margin-top: 50px;
             color: #b8860b; /* طلایی تیره */
             font-weight: 800;
+            font-size: 32px;
+            margin-bottom: 40px;
         }
 
         .btn-container {
-            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* فاصله بین دکمه‌ها */
         }
 
         .btn {
-            display: inline-block;
-            margin: 10px;
             padding: 12px 25px;
             background: #ffd700; /* طلایی */
             color: #000;
             text-decoration: none;
             border-radius: 12px;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             transition: 0.25s;
@@ -45,20 +53,21 @@
         }
 
         .box {
-            position: absolute;
+            position: fixed; /* همیشه بالا سمت راست */
             top: 20px;
             right: 20px;
-            background: linear-gradient(135deg, #fff, #ffd700);
-            border: 2px solid #ffd700;
+            background: #ffd700;
+            border: 2px solid #fff;
             padding: 15px;
             font-weight: bold;
             font-size: 18px;
             border-radius: 8px;
+            color: #000;
         }
 
         .box span {
             margin-left: 10px;
-            color: #b8860b;
+            color: #fff;
             font-size: 20px;
         }
     </style>
