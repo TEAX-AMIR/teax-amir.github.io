@@ -14,7 +14,7 @@
             background: #fff8dc; /* طلایی روشن یک‌دست */
             margin: 0;
             padding: 0;
-            min-height: 100vh; /* کل ارتفاع صفحه */
+            min-height: 100vh; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -22,7 +22,7 @@
         }
 
         h1 {
-            color: #b8860b; /* طلایی تیره */
+            color: #b8860b;
             font-weight: 800;
             font-size: 32px;
             margin-bottom: 40px;
@@ -31,12 +31,12 @@
         .btn-container {
             display: flex;
             justify-content: center;
-            gap: 20px; /* فاصله بین دکمه‌ها */
+            gap: 20px;
         }
 
         .btn {
             padding: 12px 25px;
-            background: #ffd700; /* طلایی */
+            background: #ffd700;
             color: #000;
             text-decoration: none;
             border-radius: 12px;
@@ -48,47 +48,61 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            background: #fff; /* سفید */
+            background: #fff;
             color: #b8860b;
         }
 
-        .box {
-            position: fixed; /* همیشه بالا سمت راست */
-            top: 20px;
-            right: 20px;
-            background: #ffd700;
-            border: 2px solid #fff;
-            padding: 15px;
-            font-weight: bold;
-            font-size: 18px;
-            border-radius: 8px;
-            color: #000;
+        /* لوگوی حرفه‌ای جدید */
+        .top-menu{
+            position:fixed;
+            top:15px;
+            right:15px;
+            z-index:50;
+            display:flex;
+            align-items:center;
+            gap:10px;
         }
 
-        .box span {
-            margin-left: 10px;
-            color: #fff;
-            font-size: 20px;
+        .square-icon{
+            width:34px;
+            height:34px;
+            border-radius:6px;
+            background: linear-gradient(145deg, #fff, #D4AF37);
+            box-shadow:
+                0 4px 15px rgba(0,0,0,0.15),
+                inset 0 2px 4px rgba(255,255,255,0.4);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-weight:900;
+            font-size:20px;
+            color:#222;
+        }
+
+        .taax-text{
+            font-weight:900;
+            font-size:20px;
+            letter-spacing:4px;
+            background:linear-gradient(90deg, #000, #333);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="box">
-        TEAX <span>T</span>
+    <!-- لوگوی جدید -->
+    <div class="top-menu">
+        <div class="square-icon">T</div>
+        <div class="taax-text">teax</div>
     </div>
 
     <h1>پیش به سوی بیکران و فراتر از آن</h1>
 
     <div class="btn-container">
-        <!-- دکمه ارواح -->
         <a class="btn" href="arvah.html">ارواح</a>
-
-        <!-- دکمه فضایی -->
         <a class="btn" href="fazayi.html">فضایی</a>
-
-        <!-- دکمه بازگشت به صفحه اصلی -->
         <a class="btn" href="../index.html">بازگشت به صفحه اصلی</a>
     </div>
 
