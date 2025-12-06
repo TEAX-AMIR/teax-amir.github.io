@@ -1,248 +1,118 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>teax</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIX</title>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap');
 
     :root{
-      --bg: #f7f8fb;
-      --card-bg: rgba(255,255,255,0.55);
-      --card-border: rgba(212,175,55,0.15);
-      --gold: #D4AF37; /* طلایی */
-      --accent: #fff;
-      /* برای استفاده از عکس هِرو، مقدار زیر را به url("path/to/your.jpg") تغییر بده */
-      --hero-image: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.06)), radial-gradient( circle at 10% 10%, rgba(212,175,55,0.08), transparent 20% );
+      --gold: #D4AF37;
+      --gold-dark: #b8922d;
+      --glass: rgba(255,255,255,0.45);
+      --glass-border: rgba(255,255,255,0.25);
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{box-sizing:border-box;}
+
     body{
       margin:0;
-      font-family:'Vazirmatn',sans-serif;
-      background: var(--bg);
-      color:#222;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      font-family: 'Vazirmatn', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.35), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(212,175,55,0.25), #ffffff 65%);
+      background-attachment: fixed;
+      text-align:center;
+      color:#111;
     }
 
-    /* ---------- HERO / نمایش تمام صفحه در موبایل ---------- */
-    .hero{
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:48px 20px;
-      gap:20px;
-      /* پس‌زمینه‌ی هِرو: میشه با url عکس عوض کرد */
-      background-image: var(--hero-image);
-      background-color:#fff;
-      background-blend-mode:overlay;
-      background-size:cover;
-      background-position:center;
-      border-bottom: 1px solid rgba(0,0,0,0.02);
-      min-height:320px;
-    }
-
-    /* وقتی موبایل (نمایشگر باریک) باشه، هِرو کل صفحه رو میگیره */
-    @media (max-width:720px){
-      .hero{
-        min-height:100vh;
-        padding-top:56px;
-        padding-bottom:56px;
-      }
-    }
-
-    .hero-inner{
-      width:100%;
-      max-width:1100px;
-      display:flex;
-      gap:28px;
-      align-items:center;
-      justify-content:space-between;
-    }
-
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:8px;
-    }
-    .brand h1{
-      margin:0;
-      font-size:30px;
-      font-weight:800;
-      color:#1f2937;
-    }
-    .brand p{
-      margin:0;
-      color:#58606b;
-      font-size:14px;
-    }
-
-    /* منوی کوچک بالا سمت راست */
+    /* مربع طلایی + سفید بالا سمت راست */
     .top-menu{
-      position:absolute;
-      top:18px;
-      right:18px;
+      position:fixed;
+      top:15px;
+      right:15px;
+      z-index:50;
       display:flex;
       align-items:center;
       gap:10px;
-      z-index:20;
-    }
-    .top-menu .menu-label{
-      font-weight:700;
-      background:rgba(255,255,255,0.36);
-      padding:8px 12px;
-      border-radius:8px;
-      border:1px solid rgba(0,0,0,0.04);
-      box-shadow:0 6px 18px rgba(0,0,0,0.06);
-      display:flex;
-      align-items:center;
-      gap:8px;
-      backdrop-filter: blur(6px);
-    }
-    .top-menu .gold-square{
-      width:16px;
-      height:16px;
-      background:linear-gradient(180deg,var(--gold), #b98f2d);
-      border-radius:3px;
-      box-shadow:0 2px 6px rgba(212,175,55,0.35), inset 0 -2px 4px rgba(0,0,0,0.06);
-      border:1px solid rgba(0,0,0,0.04);
     }
 
-    /* کارت‌ها: شیشه‌ای، مربعی‌تر */
-    .cards{
-      max-width:1100px;
-      margin:22px auto 64px;
-      padding: 0 20px;
-      display:grid;
-      gap:18px;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .card{
+    .square-icon{
+      width:34px;
+      height:34px;
+      border-radius:6px;
+      background:
+        linear-gradient(145deg, #fff, var(--gold));
+      box-shadow:
+        0 4px 15px rgba(0,0,0,0.15),
+        inset 0 2px 4px rgba(255,255,255,0.4);
       display:flex;
-      flex-direction:column;
       justify-content:center;
-      align-items:flex-start;
+      align-items:center;
+      font-weight:900;
+      font-size:20px;
+      color:#222;
+    }
+
+    .taax-text{
+      font-weight:900;
+      font-size:20px;
+      letter-spacing:4px;
+      background:linear-gradient(90deg, #000, #333);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* متن بزرگ TIX */
+    .hero-title{
+      margin-top:150px;
+      font-size:82px;
+      font-weight:900;
+      letter-spacing:6px;
+      background:linear-gradient(180deg, #000, #444);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* دکمه‌ی شیشه‌ای */
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:14px 26px;
+      border-radius:14px;
+      background:var(--glass);
+      border:1px solid var(--glass-border);
+      backdrop-filter:blur(13px) saturate(160%);
       text-decoration:none;
-      color:inherit;
-      padding:20px;
-      min-height:140px; /* مربع‌نما */
-      border-radius:12px; /* کم گرد برای حالت مربعی */
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      box-shadow: 0 6px 22px rgba(15,23,42,0.06);
-      transition: transform .25s ease, box-shadow .25s ease;
-      backdrop-filter: blur(8px) saturate(115%);
-      -webkit-backdrop-filter: blur(8px) saturate(115%);
-    }
-
-    .card:hover{
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(15,23,42,0.10);
-    }
-
-    .card .title{
       font-size:18px;
       font-weight:700;
-      margin-bottom:6px;
-      color:#111827;
-    }
-    .card .desc{
-      font-size:13px;
-      color:#475569;
+      color:#222;
+      transition:.25s;
+      box-shadow:0 8px 28px rgba(0,0,0,0.12);
     }
 
-    /* یک نسخه فشرده برای موبایل: کارت‌ها مربع‌تر و متن وسط‌چین */
-    @media (max-width:520px){
-      .cards{
-        grid-template-columns: repeat(2, 1fr);
-        gap:12px;
-      }
-      .card{
-        min-height:140px;
-        align-items:center;
-        text-align:center;
-      }
-      .card .desc{font-size:12px}
+    .btn:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 32px rgba(0,0,0,0.18);
     }
 
-    /* استایل برای دسکتاپ: صفحه‌بندی هِرو و کارت‌ها */
-    @media (min-width:721px){
-      .hero-inner{
-        padding:28px;
-      }
-      .brand h1{font-size:36px}
-    }
-
-    /* دکمه‌ای طلایی کوچک (اگر خواستی در داخل هِرو) */
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius:10px;
-      background:linear-gradient(180deg,var(--gold), #b98f2d);
-      color:#fff;
-      font-weight:700;
-      text-decoration:none;
-      box-shadow:0 8px 28px rgba(212,175,55,0.15);
-    }
-
-    /* حالت کم‌رنگ در مرورگرهایی که backdrop-filter پشتیبانی نمی‌کنند */
-    @supports not (backdrop-filter: blur(1px)) {
-      .card{ background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(250,250,250,0.85)); }
-      .top-menu .menu-label{ background: #fff; }
-    }
   </style>
 </head>
 <body>
 
-  <!-- منوی کوچک بالا سمت راست -->
-  <div class="top-menu" aria-hidden="false">
-    <div class="menu-label" role="button" tabindex="0">
-      <span>تیکس</span>
-      <span class="gold-square" aria-hidden="true"></span>
-    </div>
+  <!-- گوشه بالا راست -->
+  <div class="top-menu">
+    <div class="square-icon">T</div>
+    <div class="taax-text">T A A X</div>
   </div>
 
-  <!-- هِرو: در موبایل تمام صفحه می‌شود -->
-  <header class="hero" role="banner" aria-label="بخش معرفی سایت">
-    <div class="hero-inner">
-      <div class="brand">
-        <h1>سایت امیر</h1>
-        <p>بهترین چیزهایی که من دوست دارم — طراحی سفید و طلایی با افکت شیشه‌ای</p>
-        <div style="margin-top:12px;">
-          <a class="cta" href="#">شروع کن</a>
-        </div>
-      </div>
+  <!-- عنوان بزرگ وسط صفحه -->
+  <h1 class="hero-title">T I X</h1>
 
-      <!-- در صفحه‌های بزرگ می‌تونیم یک تصویر یا المان تزئینی بذاریم -->
-      <div class="hero-art" aria-hidden="true" style="min-width:220px;max-width:360px;">
-        <!-- میتونی اینجا یک SVG / تصویر قرار بدی -->
-        <svg width="100%" height="100%" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 10px 30px rgba(0,0,0,0.08));">
-          <rect x="10" y="20" width="280" height="160" rx="14" fill="rgba(255,255,255,0.55)" stroke="rgba(212,175,55,0.12)"/>
-          <circle cx="90" cy="80" r="32" fill="rgba(212,175,55,0.12)"/>
-          <circle cx="200" cy="60" r="18" fill="rgba(212,175,55,0.18)"/>
-        </svg>
-      </div>
-    </div>
-  </header>
-
-  <!-- کارت‌ها -->
-  <main>
-    <div class="cards" role="list">
-      <a class="card" href="games/minecraft.html" role="listitem">
-        <div class="title">ماوراع الطبیعه</div>
-        <div class="desc"></div>
-      </a>
-
-    </div>
-  </main>
+  <!-- تنها دکمه سایت -->
+  <a class="btn" href="games/">رفتن به پوشه گیمز</a>
 
 </body>
 </html>
