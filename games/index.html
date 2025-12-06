@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background: #f4f6fa;
+            background: linear-gradient(135deg, #fff8dc, #ffd700); /* سفید طلایی */
             margin: 0;
             padding: 0;
             text-align: center;
@@ -20,18 +20,12 @@
             font-weight: 800;
         }
 
-        .content {
-            margin-top: 25px;
-            font-size: 22px;
-        }
-
         .btn {
-            display: block;
-            width: fit-content;
-            margin: 25px auto;
+            display: inline-block;
+            margin: 20px;
             padding: 12px 25px;
-            background: #1a73e8;
-            color: white;
+            background: #ffd700;
+            color: #000;
             text-decoration: none;
             border-radius: 12px;
             font-size: 16px;
@@ -42,24 +36,42 @@
 
         .btn:hover {
             transform: translateY(-3px);
+            background: #fff8dc;
+        }
+
+        .box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #fff8dc, #ffd700);
+            border: 2px solid #ffd700;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+
+        .box span {
+            margin-left: 10px;
+            color: #1a73e8;
+            font-size: 20px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>علوم تجربی</h1>
-
-    <div class="content">
-        معادله معروف انیشتین:<br><br>
-        <b>E = mc²</b>
+    <div class="box">
+        TEAX <span>T</span>
     </div>
 
-    <!-- دکمه ارجاع به همین پوشه -->
-    <a class="btn" href="index.html">ارجاع به علوم تجربی</a>
+    <h1>پیش به سوی بیکران وفراتر از ان</h1>
 
-    <!-- دکمه برگشت -->
-    <a class="btn" href="../index.html">بازگشت به صفحه اصلی</a>
+    <!-- دکمه ارواح -->
+    <a class="btn" href="arvah.html">ارواح</a>
+
+    <!-- دکمه فضایی -->
+    <a class="btn" href="fazayi.html">فضایی</a>
 
 </body>
 </html>
