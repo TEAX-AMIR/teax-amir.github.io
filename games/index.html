@@ -3,125 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teax</title>
+    <title>علوم تجربی</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap');
-
         body {
             font-family: 'Vazirmatn', sans-serif;
+            background: #f4f6fa;
             margin: 0;
             padding: 0;
-            background: #f4f6fa; /* زمینه روشن مثل DentCast */
-        }
-
-        /* هدر */
-        .header {
             text-align: center;
-            margin-top: 40px;
-            margin-bottom: 10px;
         }
 
-        .header h1 {
-            font-size: 34px;
+        h1 {
+            margin-top: 30px;
+            color: #1a73e8;
             font-weight: 800;
-            color: #1a73e8; /* آبی DentCast */
-            margin-bottom: 6px;
         }
 
-        .header p {
-            color: #6c757d;
-            font-size: 15px;
-            margin: 0;
+        .content {
+            margin-top: 25px;
+            font-size: 22px;
         }
 
-        /* کارت‌ها */
-        .cards {
-            max-width: 900px;
-            margin: 25px auto;
-            padding: 10px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: #ffffff;
-            padding: 22px;
-            border-radius: 18px;
-            border: 1px solid #e6e9ef;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            transition: 0.25s;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #212529;
-        }
-
-        .dot {
-            width: 11px;
-            height: 11px;
-            background: #ff9800;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 6px;
-        }
-
-        /* دکمه برگشت */
-        .back-btn {
+        .btn {
             display: block;
             width: fit-content;
-            margin: 35px auto;
-            padding: 14px 30px;
+            margin: 25px auto;
+            padding: 12px 25px;
             background: #1a73e8;
             color: white;
             text-decoration: none;
-            border-radius: 14px;
-            font-size: 17px;
+            border-radius: 12px;
+            font-size: 16px;
             font-weight: 600;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             transition: 0.25s;
         }
 
-        .back-btn:hover {
+        .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 22px rgba(0,0,0,0.18);
         }
-
     </style>
 </head>
 
 <body>
 
-    <!-- هدر مانند DentCast -->
-    <div class="header">
-        <h1>علم</h1>
-        <p></p>
+    <h1>علوم تجربی</h1>
+
+    <div class="content">
+        معادله معروف انیشتین:<br><br>
+        <b>E = mc²</b>
     </div>
 
-    <!-- کارت‌ها -->
-    <div class="cards">
-
-        <div class="card">
-            <div class="title">فیزیک <span class="dot"></span></div>
-        </div>
-
-        <div class="card">
-            <div class="title">علوم تجربی <span class="dot"></span></div>
-        </div>
-
-    </div>
+    <!-- دکمه ارجاع به همین پوشه -->
+    <a class="btn" href="index.html">ارجاع به علوم تجربی</a>
 
     <!-- دکمه برگشت -->
-    <a class="back-btn" href="../index.html">بازگشت به صفحه اصلی</a>
+    <a class="btn" href="../index.html">بازگشت به صفحه اصلی</a>
 
 </body>
 </html>
