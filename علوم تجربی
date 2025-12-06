@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEAX</title>
+    <title>علوم تجربی</title>
 
     <style>
         body {
             font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(135deg, #fff 40%, #ffd700 100%); /* ترکیب سفید و طلایی */
+            background: linear-gradient(180deg, #fff 50%, #ffd700 100%); /* ترکیب سفید و طلایی */
             margin: 0;
             padding: 0;
             text-align: center;
         }
 
         h1 {
-            margin-top: 30px;
-            color: #b8860b; /* طلایی تیره برای هماهنگی */
+            margin-top: 50px;
+            color: #b8860b; /* طلایی تیره */
             font-weight: 800;
+        }
+
+        .btn-container {
+            margin-top: 40px;
         }
 
         .btn {
             display: inline-block;
-            margin: 20px;
+            margin: 10px;
             padding: 12px 25px;
-            background: #ffd700;
+            background: #ffd700; /* طلایی */
             color: #000;
             text-decoration: none;
             border-radius: 12px;
@@ -36,7 +40,7 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            background: #fff;
+            background: #fff; /* سفید */
             color: #b8860b;
         }
 
@@ -66,16 +70,18 @@
         TEAX <span>T</span>
     </div>
 
-    <h1>بسوی بیکران وفراتر از ان</h1>
+    <h1>پیش به سوی بیکران و فراتر از آن</h1>
 
-    <!-- دکمه ارواح -->
-    <a class="btn" href="arvah.html">ارواح</a>
+    <div class="btn-container">
+        <!-- دکمه ارواح -->
+        <a class="btn" href="arvah.html">ارواح</a>
 
-    <!-- دکمه فضایی -->
-    <a class="btn" href="fazayi.html">فضایی</a>
+        <!-- دکمه فضایی -->
+        <a class="btn" href="fazayi.html">فضایی</a>
 
-    <!-- دکمه بازگشت به صفحه اصلی -->
-    <a class="btn" href="../index.html">بازگشت به صفحه اصلی</a>
+        <!-- دکمه بازگشت به صفحه اصلی -->
+        <a class="btn" href="../index.html">بازگشت به صفحه اصلی</a>
+    </div>
 
 </body>
 </html>
