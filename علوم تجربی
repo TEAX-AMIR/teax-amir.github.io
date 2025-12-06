@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>علوم تجربی</title>
+    <title>TEAX</title>
 
     <style>
         body {
@@ -66,7 +66,7 @@
         TEAX <span>T</span>
     </div>
 
-    <h1>علوم تجربی</h1>
+    <h1>بسوی بیکران وفراتر از ان</h1>
 
     <!-- دکمه ارواح -->
     <a class="btn" href="arvah.html">ارواح</a>
