@@ -1,213 +1,109 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سفر به اعماق فضا</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Space — فضا و کیهان</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Vazirmatn', sans-serif;
-            background: #000;
-            color: #eee;
-            overflow-x: hidden;
-        }
+  <style>
+    body{
+      margin:0;
+      padding:40px 22px;
+      font-family:'Vazirmatn',sans-serif;
+      background:radial-gradient(circle at center,#0b1a33,#05080f);
+      color:#eee;
+      line-height:1.9;
+      text-align:center;
+    }
 
-        /* پس‌زمینه‌ی ستاره‌ای */
-        .stars {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            background: url("https://i.ibb.co/CHw4vQB/stars.png");
-            animation: moveStars 80s linear infinite;
-            z-index: -1;
-        }
+    h1{
+      font-size:34px;
+      font-weight:900;
+      margin-bottom:20px;
+      text-shadow:0 6px 18px rgba(0,0,0,.6);
+    }
 
-        @keyframes moveStars {
-            from { background-position: 0 0; }
-            to   { background-position: 10000px 10000px; }
-        }
+    .box{
+      max-width:900px;
+      margin:0 auto;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:16px;
+      padding:30px;
+      backdrop-filter:blur(10px) saturate(160%);
+      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+    }
 
-        /* لوگو */
-        .top-menu{
-            position:fixed;
-            top:15px;
-            right:15px;
-            display:flex;
-            align-items:center;
-            gap:10px;
-            z-index:100;
-        }
-        .square-icon{
-            width:38px;
-            height:38px;
-            border-radius:6px;
-            background:linear-gradient(145deg,#fff,#D4AF37);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-size:20px; font-weight:900;
-            color:#111;
-        }
-        .taax-text{
-            font-size:20px;
-            font-weight:900;
-            letter-spacing:4px;
-            background:linear-gradient(90deg,#fff,#ccc);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-        }
+    h2{
+      margin-top:28px;
+      font-size:24px;
+      font-weight:900;
+      color:#ffd86b;
+    }
 
-        /* عنوان */
-        h1 {
-            text-align: center;
-            margin-top: 100px;
-            font-size: 38px;
-            font-weight: 900;
-        }
-
-        /* بخش‌ها */
-        .section {
-            max-width: 850px;
-            background: rgba(255,255,255,0.08);
-            padding: 25px;
-            margin: 40px auto;
-            border-radius: 16px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.15);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            opacity: 0;
-            transform: translateY(40px);
-            animation: fadeIn 1.3s forwards;
-        }
-
-        .section:nth-child(1){ animation-delay: .2s; }
-        .section:nth-child(2){ animation-delay: .4s; }
-        .section:nth-child(3){ animation-delay: .6s; }
-        .section:nth-child(4){ animation-delay: .8s; }
-        .section:nth-child(5){ animation-delay: 1s; }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h2 {
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
-
-        /* عکس‌های فضایی */
-        .img-box {
-            width: 100%;
-            border-radius: 14px;
-            overflow: hidden;
-            margin: 15px 0 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-        }
-        .img-box img {
-            width: 100%;
-            display: block;
-        }
-
-        .back {
-            display: block;
-            text-align: center;
-            margin: 40px auto;
-            padding: 12px 25px;
-            background: #ffd700;
-            color: #000;
-            width: fit-content;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: .25s;
-        }
-
-        .back:hover{
-            background:#fff;
-            transform: translateY(-3px);
-        }
-    </style>
+    a.btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:12px 24px;
+      background:rgba(255,255,255,0.2);
+      border-radius:12px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:700;
+      backdrop-filter:blur(8px);
+      transition:0.25s;
+    }
+    a.btn:hover{
+      transform:translateY(-6px);
+      background:rgba(255,255,255,0.3);
+    }
+  </style>
 </head>
-
 <body>
 
-    <div class="stars"></div>
+  <h1>دنیای فضا و کیهان</h1>
 
-    <div class="top-menu">
-        <div class="square-icon">T</div>
-        <div class="taax-text">teax</div>
-    </div>
+  <div class="box">
+    <p>
+      به دنیای شگفت‌انگیز Space خوش آمدی.  
+      اینجا همه چیز دربارهٔ جهان، کهکشان‌ها، ستاره‌ها و سازوکار کیهان توضیح داده شده است.
+    </p>
 
-    <h1>سفر به اعماق فضا و کیهان</h1>
+    <h2>راجوت</h2>
+    <p>
+      راجوت یک مفهوم کیهانی است که به ناحیه‌های ژرف میان‌ستاره‌ای گفته می‌شود؛
+      جایی که انرژی‌ها و موج‌ها آزادانه حرکت می‌کنند و عامل شکل‌گیری ساختارهای بزرگ کیهانی هستند.
+    </p>
 
-    <!-- بخش ۱ -->
-    <div class="section">
-        <h2>✨ فضا؛ دنیای سکوت مطلق</h2>
-        <div class="img-box">
-            <img src="https://i.ibb.co/pKSP7Ph/space1.jpg">
-        </div>
-        <p>
-            فضا محیطی است بی‌هوا، تاریک و بی‌نهایت سرد که هیچ صدایی در آن پخش نمی‌شود.  
-            جایی که تنها نور ستارگان است که تاریکی را می‌شکند.
-        </p>
-    </div>
+    <h2>کهکشان</h2>
+    <p>
+      کهکشان مجموعه‌ای عظیم از میلیاردها ستاره، غبار، گاز و ماده تاریک است.
+      ما در کهکشان راه شیری زندگی می‌کنیم که یک بازوی مارپیچی بزرگ دارد.
+    </p>
 
-    <!-- بخش ۲ -->
-    <div class="section">
-        <h2>🌌 کیهان؛ بزرگ‌تر از تصور ما</h2>
-        <div class="img-box">
-            <img src="https://i.ibb.co/J30zqMv/galaxy.jpg">
-        </div>
-        <p>
-            کیهان شامل میلیاردها کهکشان است. هر کهکشان خود شامل میلیاردها ستاره و سیاره است.  
-            ما تنها جزئی کوچک از این عظمت بی‌نهایت هستیم.
-        </p>
-    </div>
+    <h2>کیهان</h2>
+    <p>
+      کیهان یا Universe تمام آن چیزی است که وجود دارد؛
+      از کوچک‌ترین ذره گرفته تا بزرگ‌ترین ساختارهای کیهانی.
+      کیهان پیوسته در حال گسترش است.
+    </p>
 
-    <!-- بخش ۳ -->
-    <div class="section">
-        <h2>🪐 سیارات دیگر؛ خانه‌هایی برای آینده؟</h2>
-        <div class="img-box">
-            <img src="https://i.ibb.co/HCKTRqg/planet2.jpg">
-        </div>
-        <p>
-            هزاران سیاره‌ی مشابه زمین کشف شده‌اند.  
-            برخی از آن‌ها اقیانوس، جو و حتی احتمال وجود حیات دارند.
-        </p>
-    </div>
+    <h2>ستاره‌ها</h2>
+    <p>
+      ستاره‌ها توپ‌های عظیم گازی از هیدروژن و هلیوم هستند که با همجوشی هسته‌ای می‌درخشند.
+      خورشید نزدیک‌ترین ستاره به ماست.
+    </p>
 
-    <!-- بخش ۴ -->
-    <div class="section">
-        <h2>🌠 کهکشان‌های دور؛ جهان‌های ناشناخته</h2>
-        <div class="img-box">
-            <img src="https://i.ibb.co/0V54w5J/nebula.jpg">
-        </div>
-        <p>
-            کهکشان‌ها هرکدام یک دنیای کامل‌اند.  
-            بعضی مارپیچی، برخی بیضوی و برخی به‌طرز عجیبی نامنظم هستند.
-        </p>
-    </div>
+    <h2>آسان (فضای خالی)</h2>
+    <p>
+      بخش اعظم جهان را «فضای خالی» تشکیل می‌دهد؛
+      اما این خلا کاملاً تهی نیست و انرژی کوانتومی در آن جریان دارد.
+    </p>
 
-    <!-- بخش ۵ -->
-    <div class="section">
-        <h2>❓ رازهای نهایی کیهان</h2>
-        <div class="img-box">
-            <img src="https://i.ibb.co/JFnkHwM/blackhole.jpg">
-        </div>
-        <p>
-            سیاهچاله‌ها، ماده تاریک، انرژی تاریک و مرز جهان  
-            هنوز از بزرگ‌ترین معماهای تاریخ بشر هستند.
-        </p>
-    </div>
-
-    <a class="back" href="../second.html">بازگشت</a>
+    <a class="btn" href="../Games/index.html">بازگشت به پوشه گیمز</a>
+  </div>
 
 </body>
 </html>
