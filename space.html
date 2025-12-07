@@ -3,108 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>روضا</title>
+    <title>سفر به اعماق فضا</title>
 
-    <!-- فونت زیبا -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Vazirmatn', Tahoma, sans-serif;
-            background: #fff8dc; /* طلایی روشن یک‌دست */
             margin: 0;
-            padding: 0;
-            min-height: 100vh; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            font-family: 'Vazirmatn', sans-serif;
+            background: #000;
+            color: #eee;
+            overflow-x: hidden;
         }
 
-        h1 {
-            color: #b8860b;
-            font-weight: 800;
-            font-size: 32px;
-            margin-bottom: 40px;
+        /* پس‌زمینه‌ی ستاره‌ای */
+        .stars {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: url("https://i.ibb.co/CHw4vQB/stars.png");
+            animation: moveStars 80s linear infinite;
+            z-index: -1;
         }
 
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
+        @keyframes moveStars {
+            from { background-position: 0 0; }
+            to   { background-position: 10000px 10000px; }
         }
 
-        .btn {
-            padding: 12px 25px;
-            background: #ffd700;
-            color: #000;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: 0.25s;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #fff;
-            color: #b8860b;
-        }
-
-        /* لوگوی حرفه‌ای جدید */
+        /* لوگو */
         .top-menu{
             position:fixed;
             top:15px;
             right:15px;
-            z-index:50;
             display:flex;
             align-items:center;
             gap:10px;
+            z-index:100;
         }
-
         .square-icon{
-            width:34px;
-            height:34px;
+            width:38px;
+            height:38px;
             border-radius:6px;
-            background: linear-gradient(145deg, #fff, #D4AF37);
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.15),
-                inset 0 2px 4px rgba(255,255,255,0.4);
+            background:linear-gradient(145deg,#fff,#D4AF37);
             display:flex;
             justify-content:center;
             align-items:center;
-            font-weight:900;
-            font-size:20px;
-            color:#222;
+            font-size:20px; font-weight:900;
+            color:#111;
         }
-
         .taax-text{
-            font-weight:900;
             font-size:20px;
+            font-weight:900;
             letter-spacing:4px;
-            background:linear-gradient(90deg, #000, #333);
+            background:linear-gradient(90deg,#fff,#ccc);
             -webkit-background-clip:text;
             -webkit-text-fill-color:transparent;
+        }
+
+        /* عنوان */
+        h1 {
+            text-align: center;
+            margin-top: 100px;
+            font-size: 38px;
+            font-weight: 900;
+        }
+
+        /* بخش‌ها */
+        .section {
+            max-width: 850px;
+            background: rgba(255,255,255,0.08);
+            padding: 25px;
+            margin: 40px auto;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeIn 1.3s forwards;
+        }
+
+        .section:nth-child(1){ animation-delay: .2s; }
+        .section:nth-child(2){ animation-delay: .4s; }
+        .section:nth-child(3){ animation-delay: .6s; }
+        .section:nth-child(4){ animation-delay: .8s; }
+        .section:nth-child(5){ animation-delay: 1s; }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        /* عکس‌های فضایی */
+        .img-box {
+            width: 100%;
+            border-radius: 14px;
+            overflow: hidden;
+            margin: 15px 0 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+        .img-box img {
+            width: 100%;
+            display: block;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin: 40px auto;
+            padding: 12px 25px;
+            background: #ffd700;
+            color: #000;
+            width: fit-content;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .back:hover{
+            background:#fff;
+            transform: translateY(-3px);
         }
     </style>
 </head>
 
 <body>
 
-    <!-- لوگوی جدید -->
+    <div class="stars"></div>
+
     <div class="top-menu">
         <div class="square-icon">T</div>
         <div class="taax-text">teax</div>
     </div>
 
-    <h1>پیش به سوی بیکران و فراتر از آن</h1>
+    <h1>سفر به اعماق فضا و کیهان</h1>
 
-    <div class="btn-container">
-        <a class="btn" href="arvah.html">ارواح</a>
-        <a class="btn" href="fazayi.html">فضایی</a>
-        <a class="btn" href="../index.html">بازگشت به صفحه اصلی</a>
+    <!-- بخش ۱ -->
+    <div class="section">
+        <h2>✨ فضا؛ دنیای سکوت مطلق</h2>
+        <div class="img-box">
+            <img src="https://i.ibb.co/pKSP7Ph/space1.jpg">
+        </div>
+        <p>
+            فضا محیطی است بی‌هوا، تاریک و بی‌نهایت سرد که هیچ صدایی در آن پخش نمی‌شود.  
+            جایی که تنها نور ستارگان است که تاریکی را می‌شکند.
+        </p>
     </div>
+
+    <!-- بخش ۲ -->
+    <div class="section">
+        <h2>🌌 کیهان؛ بزرگ‌تر از تصور ما</h2>
+        <div class="img-box">
+            <img src="https://i.ibb.co/J30zqMv/galaxy.jpg">
+        </div>
+        <p>
+            کیهان شامل میلیاردها کهکشان است. هر کهکشان خود شامل میلیاردها ستاره و سیاره است.  
+            ما تنها جزئی کوچک از این عظمت بی‌نهایت هستیم.
+        </p>
+    </div>
+
+    <!-- بخش ۳ -->
+    <div class="section">
+        <h2>🪐 سیارات دیگر؛ خانه‌هایی برای آینده؟</h2>
+        <div class="img-box">
+            <img src="https://i.ibb.co/HCKTRqg/planet2.jpg">
+        </div>
+        <p>
+            هزاران سیاره‌ی مشابه زمین کشف شده‌اند.  
+            برخی از آن‌ها اقیانوس، جو و حتی احتمال وجود حیات دارند.
+        </p>
+    </div>
+
+    <!-- بخش ۴ -->
+    <div class="section">
+        <h2>🌠 کهکشان‌های دور؛ جهان‌های ناشناخته</h2>
+        <div class="img-box">
+            <img src="https://i.ibb.co/0V54w5J/nebula.jpg">
+        </div>
+        <p>
+            کهکشان‌ها هرکدام یک دنیای کامل‌اند.  
+            بعضی مارپیچی، برخی بیضوی و برخی به‌طرز عجیبی نامنظم هستند.
+        </p>
+    </div>
+
+    <!-- بخش ۵ -->
+    <div class="section">
+        <h2>❓ رازهای نهایی کیهان</h2>
+        <div class="img-box">
+            <img src="https://i.ibb.co/JFnkHwM/blackhole.jpg">
+        </div>
+        <p>
+            سیاهچاله‌ها، ماده تاریک، انرژی تاریک و مرز جهان  
+            هنوز از بزرگ‌ترین معماهای تاریخ بشر هستند.
+        </p>
+    </div>
+
+    <a class="back" href="../second.html">بازگشت</a>
 
 </body>
 </html>
