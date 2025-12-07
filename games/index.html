@@ -1,110 +1,154 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اشباح بین ستاره ای</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Games — TEAX</title>
 
-    <!-- فونت زیبا -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Vazirmatn', Tahoma, sans-serif;
-            background: #fff8dc; /* طلایی روشن یک‌دست */
-            margin: 0;
-            padding: 0;
-            min-height: 100vh; 
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+  <style>
+    :root{
+      --gold:#D4AF37;
+      --glass: rgba(255,255,255,0.45);
+      --glass-border: rgba(255,255,255,0.25);
+      --bg-dark: #0b0b10;
+      --text: #eee;
+    }
 
-        h1 {
-            color: #b8860b;
-            font-weight: 800;
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
+    html,body{height:100%;}
 
-        .btn-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    body{
+      margin:0;
+      font-family: 'Vazirmatn', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.12), transparent 30%),
+        linear-gradient(180deg,#071026 0%, #061018 60%);
+      color:var(--text);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:40px 18px;
+      box-sizing:border-box;
+    }
 
-        .btn {
-            padding: 12px 25px;
-            background: #ffd700;
-            color: #000;
-            text-decoration: none;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: 0.25s;
-        }
+    /* لوگو بالا سمت راست */
+    .top-menu{
+      position:fixed;
+      top:15px;
+      right:15px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      z-index:50;
+    }
+    .square-icon{
+      width:38px;
+      height:38px;
+      border-radius:6px;
+      background:linear-gradient(145deg,#fff,var(--gold));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      color:#222;
+      box-shadow:0 6px 20px rgba(0,0,0,0.35), inset 0 2px 4px rgba(255,255,255,0.45);
+      font-size:20px;
+    }
+    .taax-text{
+      font-weight:900;
+      font-size:18px;
+      letter-spacing:4px;
+      background:linear-gradient(90deg,#fff,#ccc);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
 
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #fff;
-            color: #b8860b;
-        }
+    h1{
+      margin:0 0 18px 0;
+      font-size:34px;
+      font-weight:900;
+      color:var(--text);
+      text-shadow:0 6px 18px rgba(0,0,0,0.6);
+    }
 
-        /* لوگوی حرفه‌ای */
-        .top-menu{
-            position:fixed;
-            top:15px;
-            right:15px;
-            z-index:50;
-            display:flex;
-            align-items:center;
-            gap:10px;
-        }
+    p.lead{
+      margin:0 0 28px 0;
+      color:#cfd8e3;
+      max-width:820px;
+      line-height:1.7;
+    }
 
-        .square-icon{
-            width:34px;
-            height:34px;
-            border-radius:6px;
-            background: linear-gradient(145deg, #fff, #D4AF37);
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.15),
-                inset 0 2px 4px rgba(255,255,255,0.4);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-weight:900;
-            font-size:20px;
-            color:#222;
-        }
+    .controls{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
 
-        .taax-text{
-            font-weight:900;
-            font-size:20px;
-            letter-spacing:4px;
-            background:linear-gradient(90deg, #000, #333);
-            -webkit-background-clip:text;
-            -webkit-text-fill-color:transparent;
-        }
-    </style>
+    /* دکمه‌ها شیشه‌ای مثل بقیه سایت */
+    .btn{
+      display:inline-block;
+      padding:12px 22px;
+      border-radius:12px;
+      background:var(--glass);
+      border:1px solid var(--glass-border);
+      backdrop-filter: blur(10px) saturate(150%);
+      text-decoration:none;
+      color:#111;
+      font-weight:700;
+      font-size:16px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.45);
+      transition: transform .22s, box-shadow .22s;
+    }
+    .btn:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 42px rgba(0,0,0,0.6);
+    }
+
+    .btn-ghost{
+      background:transparent;
+      color:var(--text);
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:none;
+    }
+
+    footer{
+      position:fixed;
+      left:16px;
+      bottom:12px;
+      color:rgba(255,255,255,0.6);
+      font-size:13px;
+    }
+
+    /* پاسخ‌گو برای موبایل */
+    @media (max-width:520px){
+      h1{font-size:26px;}
+      .taax-text{font-size:16px;}
+      .btn{padding:10px 16px;font-size:15px;}
+    }
+  </style>
 </head>
-
 <body>
 
-    <!-- لوگوی جدید -->
-    <div class="top-menu">
-        <div class="square-icon">T</div>
-        <div class="taax-text">teax</div>
-    </div>
+  <div class="top-menu">
+    <div class="square-icon">T</div>
+    <div class="taax-text">teax</div>
+  </div>
 
-    <h1>پیش به سوی بیکران و فراتر از آن</h1>
+  <h1>بخش بازی‌ها</h1>
+  <p class="lead">اینجا لیست بازی‌ها و پروژه‌های سرگرم‌کنندهٔ سایت قرار می‌گیرد. برای رفتن به بخش فضا و مطالعه بیشتر در مورد کیهان، از دکمهٔ «رفتن به Space» استفاده کن.</p>
 
-    <div class="btn-container">
-        <a class="btn" href="arvah.html">ارواح</a>
-        <a class="btn" href="Space/index.html">فضایی</a>
-        <a class="btn" href="../index.html">بازگشت به صفحه اصلی</a>
-    </div>
+  <div class="controls">
+    <!-- دکمه‌ای که کاربر را به پوشه‌ی Space می‌فرستد -->
+    <a class="btn" href="../Space/index.html">رفتن به Space</a>
 
-</body>
-</html>
+    <!-- دکمه‌های نمونه دیگر -->
+    <a class="btn btn-ghost" href="game1.html">بازی ۱</a>
+    <a class="btn btn-ghost" href="game2.html">بازی ۲</a>
+    <a class="btn btn-ghost" href="../index.html">صفحهٔ اصلی</a>
+  </div>
+
+  <footer>© TEAX — Games</footer>
